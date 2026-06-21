@@ -32,8 +32,11 @@ balances real travel time, and hands you actual venues you can go to.
 - ⚖️ **Travel-time-fair meeting point** (not just the geographic midpoint), with an
   honest "Live traffic" vs "Approximate" badge.
 - 🔎 **Live address autocomplete** for both inputs.
-- 📍 **Real nearby places** in 7 categories — coffee, food, drinks, parks, hiking,
-  dog parks, hotels — as a list and as map pins.
+- 📍 **Real nearby places** in 8 categories — coffee, food, drinks, parks, hiking,
+  dog parks, hotels, movie theaters — as a list and as map pins, each with an
+  **"Open in Google Maps"** link.
+- 🔗 **Share a meeting point** — a clean share/copy link that reopens the spot and
+  what's nearby (without revealing anyone's start location).
 - 🗺️ **Interactive light/dark map** with both locations, the meeting point, and the
   driving route.
 - 📏 **Miles/kilometers** toggle and a town/state label for the meeting point.
