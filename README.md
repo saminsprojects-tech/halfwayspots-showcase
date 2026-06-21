@@ -41,6 +41,14 @@ balances real travel time, and hands you actual venues you can go to.
 - 🌗 **Dark-first, minimal design** with a remembered light/dark toggle.
 - 🛟 Graceful handling of bad input, no results, API hiccups, and errors.
 
+## Screenshots
+<p align="center">
+  <img src="images/screenshot-search.png" alt="Halfway Spots — enter two locations" width="32%" />
+  <img src="images/screenshot-result.png" alt="Fair meeting point with a live-traffic badge" width="32%" />
+  <img src="images/screenshot-map.png" alt="Interactive map with the route, pins, and nearby places" width="32%" />
+</p>
+<p align="center"><em>Enter two locations · get a travel-time-fair meeting point (live traffic) · see real places nearby on the map.</em></p>
+
 ## How the fair point works
 1. Get the real driving route between the two locations (traffic-aware).
 2. Sample candidate points along that route.
@@ -52,6 +60,21 @@ React + Vite · Leaflet (CARTO/OpenStreetMap) · Geoapify (geocoding & places) �
 TomTom (traffic-aware routing) · Cloudflare Pages, Functions & D1 · Cloudflare Web
 Analytics.
 
+## Security & engineering
+Built responsibly, then verified — not assumed:
+- 🔑 **No third-party keys in the browser** — traffic-aware routing runs in a
+  Cloudflare Function, so the routing key stays server-side; the geocoding key is
+  domain-locked.
+- 🛡️ **Hardened against injection** — database writes use parameterized queries
+  (SQL-injection-safe) and all user/API text is escaped on render (XSS-safe),
+  validated with real attack payloads.
+- 📜 **Security headers** — Content-Security-Policy plus clickjacking, MIME-sniffing,
+  and referrer protections on every response.
+- 🚦 **Abuse protection** — the feedback endpoint is validated and rate-limited at
+  the edge.
+- 🛟 **Graceful degradation** — sensible fallbacks (e.g. geographic midpoint when no
+  drivable route exists) and friendly error states instead of blank pages.
+
 ## Roadmap
 Up to 5 locations · walking/transit/bicycle modes · "open in Google Maps" from
 results · ratings for suggested spots · avoid-tolls/highways · deeper analytics ·
@@ -61,7 +84,3 @@ meeting/journey & road-trip planning.
 A solo product built end-to-end — from idea and product decisions to a live,
 deployed site on a custom domain. The application source code is kept in a private
 repository; **access is available to recruiters/collaborators on request.**
-
-> _Screenshots of the live app will be added here. For now, the banner above reflects
-> the product's look and feel — see it for real at
-> [halfwayspots.com](https://halfwayspots.com)._
