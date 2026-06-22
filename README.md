@@ -81,6 +81,9 @@ Built responsibly, then verified — not assumed:
   the edge.
 - 🛟 **Graceful degradation** — sensible fallbacks (e.g. geographic midpoint when no
   drivable route exists) and friendly error states instead of blank pages.
+- ⚡ **Edge-cached API proxies** — third-party lookups (places, geocoding) run through
+  serverless functions with a shared edge cache, so popular areas don't re-pay per
+  request — with a direct fallback so nothing breaks if the cache layer is unavailable.
 
 ## Roadmap
 Public transit mode (driving, walking & cycling already live; walk/bike in beta) ·
