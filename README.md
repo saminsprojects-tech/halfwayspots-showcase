@@ -31,6 +31,8 @@ balances real travel time, and hands you actual venues you can go to.
 ## Features
 - ⚖️ **Travel-time-fair meeting point** (not just the geographic midpoint), with an
   honest "Live traffic" vs "Approximate" badge.
+- 👥 **Up to 5 locations** — a fair point for a whole group, with a choice between
+  equal travel times or the shortest possible longest trip.
 - 🧭 **Driving, Walking & Cycling modes** — pick how the trip is made (Walk and Bike
   are in beta; public transit not yet supported).
 - 🔎 **Live address autocomplete** for both inputs.
@@ -81,7 +83,7 @@ Built responsibly, then verified — not assumed:
   drivable route exists) and friendly error states instead of blank pages.
 
 ## Roadmap
-Up to 5 locations · public transit mode (walking & cycling already live, in beta) ·
+Public transit mode (driving, walking & cycling already live; walk/bike in beta) ·
 ratings for suggested spots · avoid-tolls/highways · deeper analytics ·
 meeting/journey & road-trip planning.
 
