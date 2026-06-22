@@ -31,6 +31,8 @@ balances real travel time, and hands you actual venues you can go to.
 ## Features
 - ⚖️ **Travel-time-fair meeting point** (not just the geographic midpoint), with an
   honest "Live traffic" vs "Approximate" badge.
+- 🧭 **Driving, Walking & Cycling modes** — pick how the trip is made (Walk and Bike
+  are in beta; public transit not yet supported).
 - 🔎 **Live address autocomplete** for both inputs.
 - 📍 **Real nearby places** in 8 categories — coffee, food, drinks, parks, hiking,
   dog parks, hotels, movie theaters — as a list and as map pins, each with an
@@ -79,8 +81,8 @@ Built responsibly, then verified — not assumed:
   drivable route exists) and friendly error states instead of blank pages.
 
 ## Roadmap
-Up to 5 locations · walking/transit/bicycle modes · "open in Google Maps" from
-results · ratings for suggested spots · avoid-tolls/highways · deeper analytics ·
+Up to 5 locations · public transit mode (walking & cycling already live, in beta) ·
+ratings for suggested spots · avoid-tolls/highways · deeper analytics ·
 meeting/journey & road-trip planning.
 
 ## About
