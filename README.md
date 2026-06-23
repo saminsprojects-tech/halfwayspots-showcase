@@ -34,11 +34,13 @@ balances real travel time, and hands you actual venues you can go to.
 - 👥 **Up to 5 locations** — a fair point for a whole group, with a choice between
   equal travel times or the shortest possible longest trip.
 - 🧭 **Driving, Walking & Cycling modes** — pick how the trip is made (Walk and Bike
-  are in beta; public transit not yet supported).
+  are in beta; public transit was evaluated and intentionally not shipped — see Roadmap).
 - 🔎 **Live address autocomplete** for both inputs.
-- 📍 **Real nearby places** in 8 categories — coffee, food, drinks, parks, hiking,
-  dog parks, hotels, movie theaters — as a list and as map pins, each with an
-  **"Open in Google Maps"** link.
+- 📍 **Real nearby places** in 9 categories — coffee, food, drinks, parks, hiking,
+  dog parks, hotels, movie theaters, and tennis/pickleball courts — as a list and as
+  map pins. Each place shows its **Google star rating** and a precise **"Open in
+  Google Maps"** link straight to that listing; permanently or temporarily closed
+  places are filtered out automatically.
 - 🔗 **Share a meeting point** — a clean share/copy link that reopens the spot and
   what's nearby (without revealing anyone's start location).
 - 🗺️ **Interactive light/dark map** with both locations, the meeting point, and the
@@ -63,9 +65,9 @@ balances real travel time, and hands you actual venues you can go to.
 4. Pick the candidate where the two times are closest — the fair point.
 
 ## Built with
-React + Vite · Leaflet (CARTO/OpenStreetMap) · Geoapify (geocoding & places) ·
-TomTom (traffic-aware routing) · Cloudflare Pages, Functions & D1 · Cloudflare Web
-Analytics.
+React + Vite · Leaflet (CARTO/OpenStreetMap) · Geoapify (geocoding) · Google Places
+(New) for nearby-places accuracy, with a Geoapify fallback · TomTom (traffic-aware
+routing) · Cloudflare Pages, Functions & D1 · Cloudflare Web Analytics.
 
 ## Security & engineering
 Built responsibly, then verified — not assumed:
@@ -86,9 +88,10 @@ Built responsibly, then verified — not assumed:
   request — with a direct fallback so nothing breaks if the cache layer is unavailable.
 
 ## Roadmap
-Public transit mode (driving, walking & cycling already live; walk/bike in beta) ·
-ratings for suggested spots · avoid-tolls/highways · deeper analytics ·
-meeting/journey & road-trip planning.
+Moving Walk/Bike's routing engine to Google for better accuracy (with the current
+provider as failover) · avoid-tolls/highways · deeper analytics · meeting/journey &
+road-trip planning. (Public transit was designed, then deliberately not shipped —
+the honest cost/consistency trade-offs weren't worth it yet.)
 
 ## About
 A solo product built end-to-end — from idea and product decisions to a live,
